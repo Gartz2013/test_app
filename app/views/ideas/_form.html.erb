@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :audio_bit %><br>
-    <%= f.file_field :audio_bit %>
+    <%= f.file_field :audio_bit, accept: 'audio/*;capture=microphone' %>
   </div>
   <div class="actions">
     <%= f.submit %>
