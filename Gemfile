@@ -49,4 +49,7 @@ end
 group :production do
   # Use Postgres for Heroku server
   gem 'pg'
+
+  # Use AWS for file uploads
+  gem 'aws-sdk'
 end

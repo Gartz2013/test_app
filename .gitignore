@@ -15,3 +15,9 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore uploads directory
+/public/uploads/*
+
+# Ignore .env files
+.env
