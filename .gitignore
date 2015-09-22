@@ -21,3 +21,6 @@
 
 # Ignore .env files
 .env
+
+# Ignore local env variables
+/config/local_env.yml
