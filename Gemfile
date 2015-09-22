@@ -5,8 +5,10 @@ gem 'dotenv-rails', :groups => [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
-# from guides.railsgirls.com/app/
+# for uploading files
 gem 'carrierwave'
+# for uploading files to aws
+gem 'carrierwave-aws'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
