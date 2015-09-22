@@ -14,6 +14,8 @@ class IdeasController < ApplicationController
 
   # GET /ideas/new
   def new
+    @s3_direct_post
+    @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: 201, acl: :public_read)
     @idea = Idea.new
   end
 
@@ -24,6 +26,7 @@ class IdeasController < ApplicationController
   # POST /ideas
   # POST /ideas.json
   def create
+
     @idea = Idea.new(idea_params)
 
     respond_to do |format|
