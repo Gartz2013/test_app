@@ -3,12 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .progress {
-  max-width: 600px;
+  height: auto;
   margin: 0.2em 0;
+  max-width: 600px;
   .bar {
-    height: 1.2em;
-    padding: 0.2em;
-    color: white;
     display: none;
+    color: white;
+    height: auto;
+    padding: 0.5em;
   }
 }

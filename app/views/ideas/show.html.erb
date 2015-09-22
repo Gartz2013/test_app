@@ -18,12 +18,13 @@
 
 <p>
   <strong>Audio:</strong>
-  <% if @idea.audio_bit.present? %>
+  <% if @idea.bucket_url.present? %>
     <audio controls>
-      <source src="<%= @idea.audio_bit_url %>" type="audio/mpeg">
+      <source src="<%= @idea.bucket_url %>" type="audio/mpeg">
     </audio>
   <% end %>
   <%= @idea.inspect %>
+  <%= @idea.to_yaml %>
 </p>
 
 <%= link_to 'Edit', edit_idea_path(@idea) %> |

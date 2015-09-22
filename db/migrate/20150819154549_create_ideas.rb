@@ -5,6 +5,7 @@ class CreateIdeas < ActiveRecord::Migration
       t.text :description
       t.string :picture
       t.string :audio_bit
+      t.string :bucket_url
 
       t.timestamps null: false
     end

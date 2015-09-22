@@ -21,6 +21,8 @@ class IdeasController < ApplicationController
 
   # GET /ideas/1/edit
   def edit
+    @s3_direct_post
+    @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: 201, acl: :public_read)
   end
 
   # POST /ideas
@@ -72,6 +74,6 @@ class IdeasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def idea_params
-      params.require(:idea).permit(:name, :description, :picture, :audio_bit)
+      params.require(:idea).permit(:name, :description, :picture, :audio_bit, :bucket_url)
     end
 end
