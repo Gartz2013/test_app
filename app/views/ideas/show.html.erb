@@ -11,20 +11,12 @@
 </p>
 
 <p>
-  <strong>Picture:</strong>
-  <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
-  <%= @idea.picture_url if @idea.picture.present? %>
-</p>
-
-<p>
-  <strong>Audio:</strong>
+  <strong>Audio:</strong><br />
   <% if @idea.bucket_url.present? %>
     <audio controls>
       <source src="<%= @idea.bucket_url %>" type="audio/mpeg">
     </audio>
   <% end %>
-  <%= @idea.inspect %>
-  <%= @idea.to_yaml %>
 </p>
 
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
